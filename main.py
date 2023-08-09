@@ -7,6 +7,7 @@ app = Flask(__name__)
 # Route to reverse a given name
 # Input: name (string) - The name to be reversed
 # Output: reversed_name (string) - The reversed name
+# Example: /reverse?name=John -> nhoJ
 def reverse_name():
     name = request.args.get('name')
     reversed_name = name[::-1]
@@ -16,6 +17,7 @@ def reverse_name():
 # Route to add a random number to a given number
 # Input: number (string) - The number to be added to
 # Output: result (string) - The sum of the given number and a random number
+# Example: /add?number=5 -> 5 + random_number
 def add_random_number():
     number = request.args.get('number')
     random_number = random.randint(1, 10)
